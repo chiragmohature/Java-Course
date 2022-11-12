@@ -1,15 +1,26 @@
-class Palindrome
+import java.util.Scanner;
+class Palindrome 
 {
-    static boolean isPalindrome(int n)
-    {
-        if (n % 11 == 0)
-        {
-            return true;
-        }
-        return false;
-    }
-    public static void main(String[] args)
-    {
-        System.out.println(isPalindrome(55) ? "Palindrome" : "Not Palindrome");
-    }
+	public static void main(String[] args) 
+	{
+		int a,no,b,temp=0;
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter any num: ");
+		no=s.nextInt();
+		b=no;
+		while(no>0)
+		{
+			a=no%10;
+			no=no/10;
+			temp=temp*10+a;
+		}
+		if(temp==b)
+		{
+			System.out.println("Palindrome");
+		}
+		else
+		{
+			System.out.println("not Palindrome");
+		}
+	}
 }
